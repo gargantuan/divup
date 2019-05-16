@@ -10,10 +10,12 @@
 
 import React, {Component} from 'react';
 import AppWrapper from '../AppWrapper';
-import {Text, StatusBar} from 'react-native';
+import {SafeAreaView, StatusBar} from 'react-native';
 import { ThemeProvider } from 'styled-components';
 import theme from '../theme';
 import { Label } from '../Typography';
+import Tally from '../Tally';
+import NumPad from '../NumPad';
 
 interface ILineItem {
   key: string,
@@ -41,12 +43,14 @@ export default class App extends Component<IProps, IState> {
   render() {
     return (
       <ThemeProvider theme={theme}>
+        <>
+        <SafeAreaView style={{flex: 0, backgroundColor: theme.namedColors.bgColorFrame}} />
         <AppWrapper>
           <StatusBar backgroundColor={theme.namedColors.bgColorFrame} barStyle="light-content" />
-          <Label light>Label light</Label>
-          <Label light bold>Label light bold</Label>
-          <Label light small>Label light bold</Label>
+          <Tally />
+          <NumPad currentMode="ADD"/>
         </AppWrapper>
+        </>
       </ThemeProvider>
     );
   }

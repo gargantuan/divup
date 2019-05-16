@@ -6,7 +6,7 @@ export interface IAppWrapperProps extends ViewProps {
   theme: Theme;
 }
 
-export default styled.SafeAreaView`
+export default styled.View`
   background-color: ${ (props: IAppWrapperProps) => props.theme.namedColors.bgColorFrame };
   flex: 1;
 `;
