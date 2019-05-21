@@ -27,5 +27,6 @@ export const theme = {
 }
 
 export type Theme = typeof theme;
+export interface IThemeable { theme: Theme; }
 export default theme;
 

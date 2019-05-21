@@ -74,3 +74,4 @@ export default class NumPadButton extends React.Component<INumpadButtonProps, {}
     );
   }
 }
+  
